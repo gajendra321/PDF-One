@@ -1,0 +1,152 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*).html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/merge-pdf",
+      "destination": "/tools/merge-pdf.html"
+    },
+    {
+      "source": "/split-pdf",
+      "destination": "/tools/split-pdf.html"
+    },
+    {
+      "source": "/compress-pdf",
+      "destination": "/tools/compress-pdf.html"
+    },
+    {
+      "source": "/edit-pdf",
+      "destination": "/tools/edit-pdf.html"
+    },
+    {
+      "source": "/sign-pdf",
+      "destination": "/tools/sign-pdf.html"
+    },
+    {
+      "source": "/pdf-converter",
+      "destination": "/tools/pdf-converter.html"
+    },
+    {
+      "source": "/images-to-pdf",
+      "destination": "/tools/images-to-pdf.html"
+    },
+    {
+      "source": "/pdf-to-images",
+      "destination": "/tools/pdf-to-images.html"
+    },
+    {
+      "source": "/extract-pdf-images",
+      "destination": "/tools/extract-pdf-images.html"
+    },
+    {
+      "source": "/protect-pdf",
+      "destination": "/tools/protect-pdf.html"
+    },
+    {
+      "source": "/unlock-pdf",
+      "destination": "/tools/unlock-pdf.html"
+    },
+    {
+      "source": "/rotate-pdf-pages",
+      "destination": "/tools/rotate-pdf-pages.html"
+    },
+    {
+      "source": "/remove-pdf-pages",
+      "destination": "/tools/remove-pdf-pages.html"
+    },
+    {
+      "source": "/extract-pdf-pages",
+      "destination": "/tools/extract-pdf-pages.html"
+    },
+    {
+      "source": "/rearrange-pdf-pages",
+      "destination": "/tools/rearrange-pdf-pages.html"
+    },
+    {
+      "source": "/webpage-to-pdf",
+      "destination": "/tools/webpage-to-pdf.html"
+    },
+    {
+      "source": "/pdf-ocr",
+      "destination": "/tools/pdf-ocr.html"
+    },
+    {
+      "source": "/add-watermark",
+      "destination": "/tools/add-watermark.html"
+    },
+    {
+      "source": "/add-page-numbers",
+      "destination": "/tools/add-page-numbers.html"
+    },
+    {
+      "source": "/pdf-overlay",
+      "destination": "/tools/pdf-overlay.html"
+    },
+    {
+      "source": "/compare-pdfs",
+      "destination": "/tools/compare-pdfs.html"
+    },
+    {
+      "source": "/web-optimize-pdf",
+      "destination": "/tools/web-optimize-pdf.html"
+    },
+    {
+      "source": "/redact-pdf",
+      "destination": "/tools/redact-pdf.html"
+    },
+    {
+      "source": "/create-pdf",
+      "destination": "/tools/create-pdf.html"
+    }
+  ]
+}
